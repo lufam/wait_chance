@@ -1,4 +1,47 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: auto 3fr auto;
+  height: 100vh;
 }
 
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.main {
+  height: 100%;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 5px 0 15px;
+  border-bottom: 2px solid #524abe;
+}
+
+.navLinks {
+  margin-right: 25px;
+  color: #524abe;
+
+  text-decoration: none; 
+  font-style: normal; 
+}
+
+.sectionCarusel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

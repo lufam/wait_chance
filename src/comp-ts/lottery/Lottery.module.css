@@ -1,0 +1,12 @@
+
+
+.happyLine {
+  display: flex;
+  justify-content: space-around;
+}
+
+.happyNum {
+  width: 25px;
+  height: 25px;
+  border: 2px solid;
+}
