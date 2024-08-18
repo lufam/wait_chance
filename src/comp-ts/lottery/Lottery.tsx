@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import st from "./Lottery.module.css";
+import { Sportka } from "./sportka/Sportka";
+import { SportkaTypeState } from "../../state";
 
-export const Lottery = () => {
+type LotteryType = {
+  lotteryState: SportkaTypeState 
+}
+
+export const Lottery = (props:LotteryType) => {
 
   let [selectedValue, setSelectedValue] = useState("sportka" || "euroJack")
 
@@ -23,25 +29,18 @@ export const Lottery = () => {
   return (
     <div className={st.lottery}>
       <div className={st.selectLine}>
-      <form>
+      <form className={st.form}>
           <label htmlFor="options">Choose an option:</label>
-          <select id="options" value={selectedValue} >
+          <select className={st.selected} id="options" value={selectedValue} >
             <option value="euro-jack">euro-jack</option>
             <option value="sportka">sportka</option>
           </select>
           <p>You selected: {selectedValue}</p>
         </form>
       </div>
-      <div className={st.happyLine}>
-        <span className={st.happyNum}>{num}</span>
-        <span className={st.happyNum}>{num}</span>
-        <span className={st.happyNum}>{num}</span>
-        <span className={st.happyNum}>{num}</span>
-        <span className={st.happyNum}>{num}</span>
-        <span className={st.happyNum}>{num}</span>
 
-        <span className={st.happyNum}>{num}</span>
-      </div>
+      <div>{selectedValue === "sportka" ? <Sportka lottery={props.lotteryState}/> : <div></div>}</div>
+
       <div className={st.buttonLine}>
         <button onClick={() => {genNumber(1, 50)}}>generate</button>
       </div>

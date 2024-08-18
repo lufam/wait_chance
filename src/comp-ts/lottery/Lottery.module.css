@@ -1,12 +1,36 @@
 
+.lottery {
+  padding: 15px 0;
+}
+
+.selectLine .form {
+  margin-bottom: 30px;
+}
+
+.selected {
+  border-radius: 8px;
+  background-color: #1fd850;
+}
 
 .happyLine {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .happyNum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
   width: 25px;
   height: 25px;
   border: 2px solid;
+  margin-bottom: 20px;
+}
+
+.buttonLine button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1fd850;
 }

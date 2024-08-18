@@ -1,0 +1,25 @@
+
+.sportka {
+  margin-bottom: 25px;
+}
+
+.sportkaLineList {
+  margin-bottom: 20px;
+}
+
+.sportkaLineList, .sportkaChance {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.sportkaLineItem, .sportkaChanceItem {
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid;
+  border-radius: 8px;
+}
